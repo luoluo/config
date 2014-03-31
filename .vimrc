@@ -19,4 +19,16 @@ highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 
 "execute pathogen#infect()
-"set expandtab
+set expandtab
+set viminfo='100,<100,s10,h
+
+set enc=gbk
+set fenc=gbk
+set fileencodings=ucs-bom,utf-8,cp936
+set termencoding=gbk
+
+"set enc=utf-8
+"set fenc=utf-8
+"set fileencodings=ucs-bom,utf-8,cp936
+"set termencoding=utf-8
+
