@@ -14,7 +14,7 @@ nnoremap <F3> :TlistToggle
 let Tlist_Use_Right_Window = 1
 let Tlist_Exit_OnlyWindow = 1
 
-":set list
+"set list
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 
