@@ -34,3 +34,5 @@ set termencoding=utf-8
 
 set incsearch
 set hlsearch 
+
+set backupdir=~/tmp
