@@ -1,6 +1,20 @@
 set nu
 set ts=4
-set tags=/home/lo/TelecomAppSearchProject/tags
+
+set ruler "show line number, curosr position.
+
+"status line
+set laststatus=2
+set statusline=
+set statusline+=%-3.3n\ " buffer number
+set statusline+=%f\ " filename
+set statusline+=%h%m%r%w " status flags
+set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type
+set statusline+=%= " right align remainder
+set statusline+=0x%-8B " character value
+set statusline+=%-14(%l,%c%V%) " line, character
+set statusline+=%<%P " file position
+
 "nnoremap <F2> :NERDTreeToggle
 "let NERDChristmasTree=1
 "let NERDTreeWinPos='left'
@@ -13,6 +27,13 @@ set tags=/home/lo/TelecomAppSearchProject/tags
 "nnoremap <F3> :TlistToggle
 "let Tlist_Use_Right_Window = 1
 "let Tlist_Exit_OnlyWindow = 1
+
+" Show autocomplete menus.
+set wildmenu
+" Show editing mode
+set showmode
+" Error bells are displayed visually.
+set visualbell
 
 "set list
 highlight WhitespaceEOL ctermbg=red guibg=red
