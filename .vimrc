@@ -1,5 +1,9 @@
 set nu
 set ts=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
 
 set ruler "show line number, curosr position.
 
@@ -38,9 +42,12 @@ set visualbell
 "set list
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
+set incsearch
+set hlsearch
+set background=dark
+
 
 "execute pathogen#infect()
-set expandtab
 set viminfo='100,<100,s10,h
 
 "set enc=gbk
@@ -53,7 +60,11 @@ set fenc=utf-8
 set fileencodings=ucs-bom,utf-8,cp936
 set termencoding=utf-8
 
-set incsearch
-set hlsearch
-
 set backupdir=~/tmp
+
+" restore cursor to last edit position
+au BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
+        \ execute("normal `\"") |
+    \ endif
+
