@@ -60,6 +60,9 @@ set fenc=utf-8
 set fileencodings=ucs-bom,utf-8,cp936
 set termencoding=utf-8
 
+
+"on somewhat unknown error, recover from here.
+"It's almost save a cat.
 set backupdir=~/tmp
 
 " restore cursor to last edit position
