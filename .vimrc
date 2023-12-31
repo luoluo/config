@@ -3,6 +3,7 @@ set ts=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set t_vb=
 
 
 set ruler "show line number, curosr position.
@@ -63,11 +64,9 @@ set termencoding=utf-8
 
 "on somewhat unknown error, recover from here.
 "It's almost save a cat.
-set backupdir=~/tmp
 
 " restore cursor to last edit position
 au BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
         \ execute("normal `\"") |
     \ endif
-
